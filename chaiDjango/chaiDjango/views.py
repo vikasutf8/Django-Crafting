@@ -10,7 +10,8 @@ def home(request):
 
 
 def about(request):
-    return HttpResponse("Hello world , you are about djang")
+    # return HttpResponse("Hello world , you are about djang")
+    return render (request ,'website/about.html')
 
 
 def contact(request):
