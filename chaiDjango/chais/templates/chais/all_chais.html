@@ -1,11 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new app of all-chais</title>
-</head>
-<body>
-    <h1>all types of chai availables</h1>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %}Chais pages{% endblock %}
+
+
+
+
+{% block content %}
+<h1 class="text-4xl text-stone-100 ">List of Chai Available here :</h1>
+<div class="grid grid-cols-3 gap-4 m-auto p-4">
+{% for tea in Chai  %}
+<div class=''>
+    <img src="{{tea.image.url}}" alt="" class="w-[100px] h-[100px]">
+    <h4 class="text-white">{{tea.name}}</h4>
+    <a href="{% url 'Chai_details' tea.id%}">
+        <button>
+            {{tea.type}} - {{tea.id}}
+        </button>
+    </a>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
+
+
