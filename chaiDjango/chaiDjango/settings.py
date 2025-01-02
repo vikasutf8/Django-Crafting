@@ -46,6 +46,9 @@ INSTALLED_APPS = [
 TAILWIND_APP_NAME='theme'
 INTERNAL_IPS =['127.0.0.1']
 NPM_BIN_PATH='/Users/vikasarya/.nvm/versions/node/v20.17.0/bin/npm'
+MEDIA_URL ='/media/'
+MEDIA_ROOT =os.path.join(BASE_DIR,'media')
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
