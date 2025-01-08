@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %} 
+test content of form
+<form method="POST">
+
+    {% csrf_token %} 
+    {{form.as_p}}
+    <button type="submit">Search Store</button>
+</form>
+
+{% if stores %}
+    <h2>Stores Available</h2>
+    <ul>
+        {% for store in stores  %}
+        <li>{{store.name}}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

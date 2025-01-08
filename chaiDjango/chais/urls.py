@@ -11,5 +11,6 @@ urlpatterns = [
  
     path('<int:chai_id>/',views.chai_detail ,name='Chai_details'),
     
+    path('chai_store/',views.chai_store_view ,name='Chai_stores'),
 
 ]

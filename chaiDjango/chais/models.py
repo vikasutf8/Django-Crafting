@@ -53,4 +53,3 @@ class ChaiCertificate(models.Model):
     def __str__(self):
         return f'Certification for {self.name.chai}'
     
-
