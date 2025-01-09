@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tweet App 
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4">Welcome to Django Mastey</h1>
+
+<h2 class="text-center mt-4 text-green">
+    {% if form.instance.pk %}Edit Tweet{% else %} Create Tweet {%endif%}
+</h2>
+<form method="post" enctype="multipart/form-dataf"
+class="form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-warning m-1"  type="submit"> Submit </button>
+    <a href="{% url 'tweet_list' %} " class=" m-1  text-primary">Back to Tweets</a>
+</form>
+
+{% endblock %}

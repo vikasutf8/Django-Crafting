@@ -17,8 +17,8 @@ def tweet_list(request):
 #create tweets
 def tweet_create(request):
     #using form two ways --empty form | submit form |just render form
-    if requset.method =="POST":
-        form =TweetForm(request.POST, request.FILES)
+    if request.method =="POST":
+        form = TweetForm(request.POST, request.FILES)
         if form.is_valid():
             tweet =form.save(commit=False) #not save in db
             tweet.user =request.user # adding user in form
